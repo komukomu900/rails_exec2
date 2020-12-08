@@ -1,0 +1,8 @@
+<p>以下で登録しますか？</p>
+<%= form_with(model: @blog, local: true)do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  <p>タイトル:<%= @blog.title %></p>
+  <p>本文:<%= @blog.content %></p>
+  <%= form.submit "登録する" %>
+<% end %>
